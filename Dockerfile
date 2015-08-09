@@ -2,7 +2,7 @@ FROM phusion/baseimage
 
 WORKDIR /root
 
-RUN apt-get update
+RUN apt-get clean && apt-get update
 
 # Install wget and build tools
 RUN apt-get install -y wget build-essential
