@@ -29,5 +29,8 @@ RUN config/install.sh
 # supplied 32 bit SML runtime
 RUN sed -i /root/bin/heap2exec -e "s/CC=cc/CC=\"cc -m32\"/g"
 
+# Add SML binaries to path
+ENV PATH /root/bin:$PATH
+
 # Set the entrypoint to the SML compiler/REPL
 ENTRYPOINT /root/bin/sml
