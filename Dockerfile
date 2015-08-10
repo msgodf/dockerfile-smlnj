@@ -19,7 +19,7 @@ RUN wget http://smlnj.cs.uchicago.edu/dist/working/110.78/config.tgz
 # Extract the source
 RUN gunzip <config.tgz | tar xf -
 
-# Replace the targets config file, in order to add heap2asm
+# Modify the configured targets, in order to build the heap2adm program
 RUN sed -i /root/config/targets -e "s/\#request heap2asm/request heap2asm/g"
 
 # Compile
