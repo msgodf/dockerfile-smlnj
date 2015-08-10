@@ -10,6 +10,9 @@ RUN apt-get install -y wget build-essential
 # Install `multilib` for 32-bit support that SML/NJ requires.
 RUN apt-get install -y gcc-multilib g++-multilib
 
+# rlwrap improves the experience inside the REPL
+RUN apt-get install rlwrap
+
 # Get the source
 RUN wget http://smlnj.cs.uchicago.edu/dist/working/110.78/config.tgz
 
